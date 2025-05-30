@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GH-Labor-Finder</title>
+  <link rel="stylesheet" href="/src/css/style.css">
+  <script type="module" src="/src/main.ts" defer></script>
+</head>
+
+<body>
+  <main>
+    <h1 class="bodyTitle">GH-Labor-Finder</h1>
+
+    <section class="searchPlayer">
+      <form class="searchPlayer__form" id="searchPlayerForm">
+        <label for="searchPlayer" class="offscreen">Search for a player</label>
+        <input class="searchPlayer__input" id="searchPlayerInput" type="text" maxlength="40" autocomplete="off"
+          placeholder="Player uuid" />
+        <button id="searchPlayer" class="button searchPlayer__button" title="Search Player">
+          Find
+        </button>
+      </form>
+    </section>
+
+    <section class="listContainer">
+      <header class="listTitle">
+        <h2 id="listName">Leaderboard</h2>
+      </header>
+      <hr/>
+      <ul id="listItems">
+      </ul>
+    </section>
+    <div class="tab-selection" id="tab-selection">
+      <button class="tab-previousTab" id="tab-previousTab">previous Tab</button>
+      <button class="tab-currentTab" id="tab-currentTab">current Tab</button>
+      <button class="tab-nextTab" id="tab-nextTab">next Tab</button>
+    </div>
+  </main>
+</body>
+
+</html>
