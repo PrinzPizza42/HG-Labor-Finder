@@ -10,11 +10,48 @@ body {
     transition: 0.5s;
 }
 
+.main-top {
+    justify-items: center;
+    align-items: center;
+}
 
+.bodyTitle {
+    width: 21vh;
+    margin: auto;
+    padding: 2vh;    
+}
+
+.searchPlayer {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    gap: 1vh;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.listContainer {
+    justify-content: center;
+    width: 75%;
+}
+
+.listTitle {
+    width: 12vh;
+    margin: auto;
+}
+
+.listName {
+    
+}
 
 .item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1vh;
     margin-bottom: 0.5vh;
 }
@@ -32,14 +69,45 @@ body {
 
 .item-face {
     height: 7vh;
+    border-radius: 7%;
+}
+
+.playerView {
+    width: 25%;
+    border: solid;
+}
+
+.playerView-name {
+    
+}
+
+.playerView-data {
+    
 }
 
 .tab-selection {
     display: block;
     width: 100%;
-    border: solid;
     text-align: center;
 }
 
 .tab-previousTab,
-.
+.tab-currentTab,
+.tab-nextTab {
+    width: 10vh;
+    height: 3vh;
+    border: none;
+    border-radius: 7%;
+}
+
+.tab-previousTab {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+}
+
+.tab-currentTab {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tab-nextTab {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+}

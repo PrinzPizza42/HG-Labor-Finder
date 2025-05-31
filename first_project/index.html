@@ -12,32 +12,49 @@
 
 <body>
   <main>
-    <h1 class="bodyTitle">GH-Labor-Finder</h1>
-
-    <section class="searchPlayer">
-      <form class="searchPlayer__form" id="searchPlayerForm">
-        <label for="searchPlayer" class="offscreen">Search for a player</label>
-        <input class="searchPlayer__input" id="searchPlayerInput" type="text" maxlength="40" autocomplete="off"
-          placeholder="Player uuid" />
-        <button id="searchPlayer" class="button searchPlayer__button" title="Search Player">
-          Find
-        </button>
-      </form>
-    </section>
-
-    <section class="listContainer">
-      <header class="listTitle">
-        <h2 id="listName">Leaderboard</h2>
-      </header>
-      <hr/>
-      <ul id="listItems">
-      </ul>
-    </section>
-    <div class="tab-selection" id="tab-selection">
-      <button class="tab-previousTab" id="tab-previousTab">previous Tab</button>
-      <button class="tab-currentTab" id="tab-currentTab">current Tab</button>
-      <button class="tab-nextTab" id="tab-nextTab">next Tab</button>
+    <div class="main-top">
+      <h1 class="bodyTitle">HG-Labor-Finder</h1>
+      <section class="searchPlayer">
+        <form class="searchPlayer__form" id="searchPlayerForm">
+          <label for="searchPlayer" class="offscreen">Search for a player</label>
+          <input class="searchPlayer__input" id="searchPlayerInput" type="text" maxlength="40" autocomplete="off"
+            placeholder="Player uuid" />
+          <button id="searchPlayer" class="button searchPlayer__button" title="Search Player">
+            Find
+          </button>
+        </form>
+        <label>Players per page</label>
+        <select id="playersPerPageDropdown">
+          <option>10</option>
+          <option>20</option>
+          <option>30</option>
+        </select>
+      </section>
     </div>
+
+    <div class="main">
+      <div class="listContainer" id="listContainer">
+        <header class="listTitle">
+          <h2 id="listName" class="listName">Leaderboard</h2>
+        </header>
+        <hr/>
+        <ul id="listItems">
+        </ul>
+      </div>
+
+      <!-- TODO: implement function to add and remove this part when a player is searched
+      <div class="playerView">
+          <div class="playerView-name" id="playerView-name"></div>
+          <div class="playerView-data"></div>
+      </div>
+      -->
+    </div>
+
+    <footer class="tab-selection" id="tab-selection">
+      <button class="tab-previousTab" id="tab-previousTab">previous Tab</button>
+      <button class="tab-currentTab" id="tab-currentTab">1</button>
+      <button class="tab-nextTab" id="tab-nextTab">next Tab</button>
+    </footer>
   </main>
 </body>
 

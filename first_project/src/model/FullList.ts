@@ -19,12 +19,15 @@ export default class PlayerLeaderboardList implements List {
         return this._list;
     }
 
-    loadPlayers(fromPlace: number, toPlace: number): void { //maybe need to reduce fromPlace for 1 if the api list starts at 0
-        console.log(`Wloading players from place ${fromPlace} to place ${toPlace}`)
+    loadPlayers(page: number, playersPerPage: number): void { //maybe need to reduce fromPlace for 1 if the api list starts at 0
+        this._list = [];
+        let fromPlace = ((page - 1) * playersPerPage) + 1;
+        let toPlace = ((page - 1) * playersPerPage) + playersPerPage;
+
+        console.log(`loading players from place ${fromPlace} to place ${toPlace}`)
         for (let i = fromPlace; i <= toPlace; i++) {
             let _playerObject = new PlayerObject(i);
             this._list.push(_playerObject);
-            console.log("loaded place " + i);
         }
     }
 }
